@@ -17,8 +17,25 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_date: true
+      read_time: true
+      breadcrumbs: true
+      comments: true
 
-title: Blog Indikatore
+
+locale: "pt-BR"
+layout: single
+search: true
+title: Blog
+logo: "/assets/images/logo.png"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,10 +46,20 @@ url: "https://indikatore-learning.github.io/" # the base hostname & protocol for
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Site Author
+author:
+  name: "Indikatore Blog"
+  avatar: "/assets/images/logo-indikatore.png"
+  bio: "Blog destinado para friday for code."
+  location: "Balneario Camboriu - SC"
+ 
 # Build settings
-theme: minima
+# theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "mint"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
